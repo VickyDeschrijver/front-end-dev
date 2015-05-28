@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hamburger menu vertikaal</title>
+    <link href="css/normalize.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+<div class="wrapper">
+    <aside id="menu" class="menu">
+        <div class="content">
+        <h3>hamburger menu</h3>
+        <ul>
+            <li><a href="hamburgermenu_vert.html" class="active">vertikaal</a></li>
+            <li><a href="hamburgermenu_hor.html">horizontaal</a></li>
+            <li><a href="hamburgermenu_responsive.html">responsive</a></li>
+            <li><a href="#">menu item 4</a></li>
+            <li><a href="#">menu 5</a></li>
+        </ul>
+</div>
+</aside>
+
+<div class="container">
+
+        <a href="#" id="toggle" class="toggle">
+            <div id="ikoon" class="ikoon"></div>
+        </a>
+        <div class="content">
+        <h1>Hamburger menu vertikaal</h1>
+
+        <p>bottle conditioning conditioning tank filter, bottle conditioning. lagering microbrewery finishing hops real
+            ale
+            bittering hops sparge. krausen adjunct terminal gravity krug ester ipa pitch acid rest malt, sparge aroma
+            hops.
+            barleywine krausen ipa amber top-fermenting yeast wort hop back. fermentation finishing hops rims alcohol
+            units
+            of bitterness dry hopping.</p>
+
+        <p>krausen mash anaerobic, kolsch aau brew carboy, pint glass. cold filter terminal gravity enzymes ale hoppy,
+            caramel malt. ipa; imperial bittering hops tulip glass crystal malt priming bacterial. bung black malt
+            berliner
+            weisse wit brewhouse bitter. brewpub brew alpha acid. amber ester amber terminal gravity lambic hops abbey
+            bitter specific gravity. barley brewing bitter dunkle beer reinheitsgebot abbey. secondary fermentation hand
+            pump; brewing-- berliner weisse.</p>
+
+        <p>pub brewhouse? dunkle additive secondary fermentation infusion, black malt rims infusion? heat exchanger
+            saccharification original gravity grainy pint glass lauter tun biere de garde. brew, degrees plato hoppy
+            mash,
+            bottle conditioning. filter lauter lauter ester lauter noble hops; caramel malt hoppy bock. abbey krausen
+            caramel malt, hard cider lambic squares ale. barleywine. yeast adjunct pint glass kolsch length; oxidized
+            carboy. ester lambic ale trappist; heat exchanger; keg, barleywine squares primary fermentation alpha acid.
+            black malt brew kettle cask conditioned ale racking berliner weisse fermentation.</p>
+
+        <p>mash wort final gravity hop back barley infusion chocolate malt. berliner weisse racking: primary
+            fermentation
+            mouthfeel bacterial bunghole attenuation sour/acidic aau. krug imperial gravity bittering hops ester aau
+            cask
+            conditioned ale cask.</p>
+
+        <p>malt cask conditioned ale. becher keg top-fermenting yeast aroma hops, conditioning; specific gravity!
+            adjunct
+            squares hand pump amber, becher scotch ale enzymes. anaerobic alcohol bacterial bung berliner weisse
+            lagering
+            bitter lambic black malt sour/acidic.</p>
+
+    </div>
+</div>
+</div>
+<script src="../frameworks/jquery/jquery-2.1.1.min.js"></script>
+<script>
+    $(function () {
+
+        $('#toggle').on("click", function () {
+            toggleNav();
+        });
+        $('.container .content').on("click", function () {
+            toggleNav();
+        });
+    });
+
+    function toggleNav() {
+        // console.log("koekoek, it's me!");
+        if ($('.wrapper').hasClass('show-menu')) {
+            // menu is nu open => sluit het
+            $('.wrapper').removeClass('show-menu');
+            $('#ikoon').removeClass('menu-active');
+            console.log('menu wordt gesloten')
+        }
+        else {
+            // menu is nu verborgen = > toon het
+            $('.wrapper').addClass('show-menu');
+            $('#ikoon').addClass('menu-active');
+            console.log('menu wordt geopend')
+        }
+    }
+
+</script>
+</body>
+</html>

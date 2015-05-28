@@ -1,0 +1,18 @@
+/*!
+styles voor 'vdab front-end developer'
+Copyright Jan Vandorpe
+version 1/2015
+*/
+
+@import "partials/base";
+@import "partials/palette";   // kleurenpalet
+@import "partials/colors";    // gebruikte kleuren
+@import "partials/typografie";  // lettertypes en kleuren
+@import "partials/mixins";    // mixins
+@import "partials/structuur"; // structuur
+@import "partials/modules";   // specifieke structuren in pagina
+@import "partials/menus";   // menus
+@import "partials/form";    //forms
+@import "csswizardry-grids";  //grid layout
+
+

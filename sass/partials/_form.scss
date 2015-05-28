@@ -1,0 +1,200 @@
+//   _form.scss
+
+/* form */
+
+// algemene form, layout gebaseerd op rijen gevormd door een div , vertikale uitlijning
+// html structuur:
+// <div>
+//     <label for="vnaam" title="verplicht">Naam</label>
+//     <input type="text" id="vnaam" name="vnaam" autofocus="" placeholder="uw naam" title="vul hier uw naam in " required="">
+//     <span class="fieldval" id="val_vnaam"></span>
+//  </div>
+
+//form width 100% container
+form {
+  font-size: 1em;
+  padding: 1em;
+}
+
+form div {
+  position: relative;
+  clear: left;
+  display: block;
+  zoom: 1;
+  margin: 0.3em 0 0 0;
+  padding: 0.1em 0.2em;
+}
+
+/*controls*/
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="url"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  width: 35%;
+  color: $inputTekst;
+  border: 1px solid #999;
+  //  min-height: 0.875em;
+  padding: 0.4em 0.5em;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input.kort {
+  width: 7em;
+}
+
+input:focus {
+  border: 1px dotted $controlBorder;
+}
+
+input.error {
+  border: 1px dotted $controlBorderError;
+}
+
+select {
+  border: 1px solid $controlBorder;
+  padding: 0.2em 0.5em;
+  min-width: 7em;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  min-height: 7em;
+}
+
+//default button
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+  color: $buttonTekst;
+  font-size: 0.875em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.4em 0.5em;
+  background-color: $buttonBgDefault;
+  border: 1px solid $buttonBrDefault;
+  box-shadow: 0 2px 5px 2px $buttonBoxShadow;
+}
+
+/*labels en berichten*/
+
+/* losse labels niet in form */
+label {
+  float: none;
+  display: inline;
+  padding: 0.3em 0;
+  //min-height: 0.875em;			/*14px*/
+  text-align: left;
+}
+
+/*labels in form context*/
+form label {
+  float: left;
+  display: block;
+  position: relative;
+  width: 25%;
+  margin: 0;
+}
+
+form label.compact {
+  display: inline;
+  margin: 0;
+  padding: 4px 10px 0 0;
+  text-indent: 0;
+  width: auto;
+}
+
+form label.labelCheckbox, label.labelRadio {
+  float: none;
+  display: inline;
+  zoom: 1;
+  padding: 0;
+  text-align: left;
+}
+
+form span.fieldval {
+  display: inline-block;
+  float: right;
+  max-width: 35%;
+  color: $errorTekst;
+  font-style: italic
+}
+
+form div.error {
+  display: none;
+}
+
+/* inline form
+Mobile: vertikaal gestapeld
+breder: horizontaal georienteerd,
+bv login form in bovenbalk
+*/
+// geen divs als container alle labels/input/button inline
+
+// structuur:
+// <form class="inline" method="get" action="/search">
+//   <label for="username">username</label>
+//   <input type="text" name="username" id="username">
+//   repeat: label input label input button
+
+form.inline {
+  padding: 0;
+}
+/*controls MF*/
+form.inline input[type="email"],
+form.inline input[type="password"],
+form.inline input[type="text"],
+form.inline input[type="url"],
+form.inline input[type="search"],
+form.inline input[type="number"],
+form.inline input[type="tel"]
+{
+  box-sizing: border-box;
+  width: 100%; //MF
+}
+form.inline label, form.inline input, form.inline button {
+  font-size: 1em;
+}
+
+form.inline label {
+  float: none;
+}
+
+form.inline input {
+  width: auto;
+}
+
+form.inline input[type=submit] {
+  display:block;
+  width: auto;
+  margin:0.2em 0;
+  box-shadow: none;
+}
+
+@include MQ(M) {
+  form.inline {
+    label {
+      display: inline;
+      padding: 0.5em 1em 0.2em 1em;
+    }
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    input[type="url"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"] {
+      width: 10em;
+    }
+    input[type="submit"] {
+      display: inline-block;
+      margin: 0.15625em 1em;  /*2.5px 16px*/
+    }
+  }
+}

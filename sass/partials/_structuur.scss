@@ -1,0 +1,12 @@
+// _structuur.scss
+
+/* algemene structuur, geen kleuren, geen backgrounds, geen lettertypes */
+footer, section {
+  padding: 1em 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+  @include clearfix;
+}

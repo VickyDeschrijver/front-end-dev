@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<!--                    STARTBESTAND                     -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Front-end developer, the Sass way</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/front-end_dev.js"></script>
+    <script src="http://use.edgefonts.net/source-sans-pro;pt-sans-narrow.js"></script>
+
+
+</head>
+
+<body class="home">
+<header class="hide-login hide-menu">
+    <div class="balk toolbalk">
+        <div class="wrapper" >
+            <!--toolbar-->
+            <!-- hamburger ikoon via CSS -->
+            <a href="#" id="hamburger" class="toggle" title="show/hide menu">
+                <div class="menubox"> <div id="ikoon" class="ikoon"></div> </div>
+            </a>
+            <img id="logo" src="img/vdab_70_30.svg" alt="vdab logo" />
+            <!-- lock ikoon via Webfont -->
+            <a href="#"  class="right" title="show/hide login">
+                <i class="mdi mdi-lock-outline" id="loginlock"></i>
+            </a>
+            <!-- end toolbar -->
+          
+        </div>
+    </div>
+    <div class="balk loginbalk" >
+        <div class="wrapper">
+            <!--start login-->
+            <form class="login inline" method="get" action="/login">
+                <label for="username">username</label>
+                <input type="text" name="username" id="username">
+                <label for="pw">wachtwoord</label>
+                <input type="password" name="pw" id="pw">
+                <input type="submit" value="aanmelden" title="aanmelden">
+            </form>
+            <!--einde login-->
+        </div>
+    </div>
+    <div class="balk menubalk">
+        <div class="wrapper">
+            <nav class="resp_menu hoofdmenu">
+                <ul>
+                    <li><a href="front-end developer_wat_sass.html" title="Wat we doen" class="huidig">Wat</a></li>
+                    <li><a href="front-end developer_portfolio_sass.html" title="Welke opleidingen bieden we aan">Opleidingen</a></li>
+                    <li><a href="front-end developer_wie_sass.html" title="Wie zijn we">Wie</a></li>
+                    <li><a href="front-end developer_contact_sass.html" title="Neem contact met ons op">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="frontImage">
+        <div class="wrapper">
+            <h2>Front-end, the final frontier,<br>
+                to boldly go where no man has gone before....</h2>
+        </div>
+    </section>
+
+</header>
+
+<section class="inhoud" id="intro">
+
+    <div class="wrapper">
+        <h1>Front-end developer,<wbr> the Sass way</h1>
+        <h2>Een vdab opleiding</h2>
+        <h3>T&amp;O Oostende</h3>
+
+        <p>De front-end developer is de CSS guru die elk design feilloos omzet in HTML structuren opgemaakt met de
+            allernieuwste CSS, cross-browser, Responsive, Mobile First, los uit het handje of met een preprocessor.
+            Zij/hij zet Usability en accesibiltiy op de eerste plaats en zorgt ervoor dat de client binnen de kortste
+            keren vind wat hij zocht.
+            Er is uiteraard maximale aandacht voor design en leuke features. Naast deze dagelijks boterham' komt er ook
+            een beleg van vanilla Javascript, FE libraries, plugins, widgets. En dan is er natuurlijk ook Backbone en
+            Angular, een RESTful interface, wat wil ej nog meer? </p>
+    </div>
+</section>
+
+<section class="inhoud" id="waarom">
+    <div class="wrapper">
+        <img src="img/responsive-design.jpg" class="roteerLinks dunneSchaduw">
+
+        <h2>Waarom een vdab opleiding?</h2>
+
+        <p class="clearFix"> De vdab opleidingen zijn intens, degelijk en hebben maar één doel: van u een <em>professional</em>
+            maken die onmiddellijk inzetbaar is bij een IT bedrijf.</p>
+        <ul>
+            <li>Deze opleidingen worden gegeven als "begeleide zelfstudie": je leert al doende en wordt toch ter plekke
+                begeleidt door de instructeur. De dot module beschrijft wat er van je verlangt wordt en hoe je dat kunt
+                bereiken
+            </li>
+            <li>Je gebruikt vdab cursussen, leest Engelstalige IT boeken en websites om het onderwerp te studeren</li>
+            <li>De opleiding bestaat uit modules: voor elke module volg je een dot brochure die zegt wat, hoe en enlang
+                je erover doet
+            </li>
+            <li>Na elke module wordt je getest op je verwerven kennis, dat kan theoretisch of practisch zijn, of
+                allebei
+            </li>
+            <li>Aan het einde van de opleiding volgt een verplichte stage bij een IT bedrijf. Je moet zelf deze
+                stageplaats zoeken
+            </li>
+            <li>Je bevindt je in een tof team van mede-cursisten die in alle staten van gevorderdheid verkeren!</li>
+        </ul>
+    </div>
+</section>
+
+<section class="inhoud" id="nieuws">
+    <div class="wrapper">
+        <h2>T&amp;O Oostende Nieuws</h2>
+
+        <div class="grid">
+            <div class="grid_item lap--one-third desk--one-third">
+                <article id="nws_123" class="nieuws_topic">
+                    <time datetime="2015-01-05T18:27:38" pubdate="true">5 januari 2015</time>
+                    <h3>Nu ook Front-end ontwikkelaar</h3>
+
+                    <div>
+                        <p>Vanaf vandaag kan je ook <a
+                                href="http://vdab.be/mijnvdab/opleidingen/opleidingen.jsp?context=MAIL&entryPoint=OpleidingInhoud&opleidingid=41424&doelgroep=2">Front-end
+                            ontwikkelaar</a> volgen in ons centrum. De Front-end developer spitst zich meer toe op op de
+                            client-side programmatie en UI van de website.</p>
+                    </div>
+                </article>
+            </div> <!--
+            --><div class="grid_item lap--one-third desk--one-third">
+                <article id="nws_456" class="nieuws_topic">
+                    <time datetime="2012-06-24T112:00:04" pubdate="true">24 Juni 2012</time>
+                    <h3>Responsive web design</h3>
+
+                    <div>
+                        <p>Met de komst van allerhande mobiele toestellen - smartphones, tablets - richten we ons in de
+                            module <code>html</code> en <code>css</code> ook op <a
+                                    href="http://www.alistapart.com/articles/responsive-web-design/">Responsive web
+                                design</a>.</p>
+
+                        <p>In plaats van verschillende websites te maken, voor desktops én voor mobiles, maken we er
+                            slechts één en zorgen ervoor dat deze zich vanzelf aanpast aan zijn context: toestel,
+                            schermgresolutie, orientatie.</p>
+
+                        <p>Daar komt heel wat bij kijken: je moet niet alleen rekening houden met het scherm, maar ook
+                            met de laadtijd van beelden, stylesheets en scripts. Ook scripting moet opnieuw bekeken
+                            worden want de OS van het toestel laat niet alles toe wat je op een Windows of Mac kan
+                            gebruiken.</p>
+                    </div>
+                </article>
+            </div><!--
+            --><div class="grid_item lap--one-third desk--one-third">
+                <article id="nws_789" class="nieuws_topic">
+                    <time datetime="2015-01-05T18:27:38" pubdate="true">5 januari 2015</time>
+                    <h3>An Event Apart</h3>
+
+                    <div>
+                        <p>Checkout <a href="http://aneventapart.com/">An Event Apart</a>: de internationale conferentie
+                            waar begrippen zoals <em>Responsive web design</em> en <em>Mobile First</em> geboren werden.
+                        </p>
+
+                        <p>Interesse? Schrijf je in bij <a href="mailto:sinterklass@hemel.com">Sinterklaas</a></p>
+                    </div>
+                </article>
+                <img src="img/HTML5_Logo_128.png" class="vlotRechts"></div>
+        </div>
+        <!--einde inhoud-->
+    </div>
+</section>
+
+<footer class="inhoud">
+    <div class="wrapper">
+        <p>&copy; vdab | <a href="webontwikkelaar_contact.html">mail ons</a> |
+            <time datetime="2013-02-04">maandag 4 februari 2013</time>
+        </p>
+        <p class="disclaimer">Dit is een oefenpagina voor de informaticaopleidingen van de vdab: het is mogelijk dat de
+            informatie op deze pagina verouderd en niet meer accuraat is. De hyperlinks kunnen naar niet bestaande URL's
+            verwijzen.</p>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

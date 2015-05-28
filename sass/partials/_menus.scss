@@ -1,0 +1,170 @@
+// _menus.scss
+
+/* Menu structuren */
+// styles voor verschillende types menus, horizontaal, verticaal
+// enkel default, GEEN KLEUREN, GEEN LETTERTYPES !
+/* responsive menu MF, class .resp_menu voor container van de UL*/
+// klein scherm, vertikaal gestackt, groter: wordt het horizontaal naast elkaar
+
+.resp_menu {
+  width: 100%;
+
+  ul {
+    list-style-type: none;
+    display: block;   // inline-block
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 1em; /*8px 16px*/
+    &:hover {
+      background-color: $menuBgHoverKleur;
+      color: $menuBgHoverTekstKleur;
+      text-decoration: underline;
+    }
+    a {
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      &:hover {
+        color: $tekst;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/*** start hamburger ikoon ***/
+
+// html structuur
+// a. menutoggle > div.menubox > div.ikoon
+
+// kleuren
+.menutoggle {
+  background-color: $achtergrond1;
+  color: $white;
+}
+.ikoon, .ikoon::before, .ikoon::after {
+  background-color: $white;
+}
+
+// structuur
+// hyperlink
+.menutoggle {
+  width: auto;
+  text-decoration: none;
+}
+
+// vierkante container
+.menubox {
+  width: 2.5em; /*40px*/
+  height: 2.5em;
+  display: inline-block;
+  position: relative;
+  line-height: 2.5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// ikoon streepje
+.ikoon {
+  width: 1.25em;  /*20px*/
+  height: 0.1875em; /*3px*/
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: all .7s ease;
+}
+
+// generated content zorgt voor twee extra streepjes
+.ikoon::before, .ikoon::after {
+  width: 100%;
+  height: 0.1875em;
+  display: block;
+  content: ' ';
+  position: absolute;
+  transition: all .7s ease;
+}
+.ikoon::before {
+  top: -0.4em;
+}
+.ikoon::after {
+  top: 0.4em;
+}
+
+// class .menu_active op .ikoon zorgt voor transform: via JS script
+.ikoon.menu-active {
+  background: none;
+}
+.ikoon.menu-active:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 1.4em; /* iets breder voor diagonaal*/
+}
+.ikoon.menu-active:after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 1.4em;
+}
+
+/*** einde hamburger ikoon ***/
+
+/* .hide menu en .hide_menu zijn classes op header */
+.menubalk, .loginbalk {
+  @include transition(all 0.4s ease-out 0.15s);
+  overflow: visible;
+  opacity: 1;
+}
+$aantalMenuItems: 4;    // aantal menus in de menubalk
+
+.menubalk {
+  height: #{$aantalMenuItems * 2.5}em;    // berekening totale hoogte
+}
+.loginbalk{
+  height: 12em;
+}
+.hide-menu .menubalk, .hide-login .loginbalk {
+  @include transition(all 0.4s ease-out 0.15s);
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/***** MQ responsive hor_menu *****/
+/*
+  geen hamburger ikoon
+  klassiek hor menu
+  steeds zichtbaar
+*/
+@include MQ(M) {
+  .menutoggle {
+    display: none;  // ikoon verbergen
+  }
+  .menubalk{
+    height: auto;
+  }
+  .resp_menu {
+    width: auto;
+    ul {
+      width: auto;
+      li {
+        display: inline-block;
+        float: left;
+        width: 6em;
+        text-align: center;
+        padding: 0.5em 1em; /*8px 16px*/
+      }
+    }
+  }
+}

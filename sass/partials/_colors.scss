@@ -1,0 +1,44 @@
+// _colors.scss
+
+// tekstkleuren
+$tekst:   $grijs3;
+$link:    $linkrood;
+$linkhover: $linkrood;
+$heading1:  $lichtbruingrijs;
+$heading2:  $lichtbruingrijs;
+$heading3:  $lichtbruingrijs;
+$nadruk:  $donkerblauw;
+$code:    $white;               // op gekleurde achtergrond
+$tekstShadow: $grijs3;
+
+// achtergrondkleuren
+$achtergrond1:  $bijnazwart;
+$achtergrond2:  $helblauw;
+$achtergrond3:  $lichtgrijs;
+$achtergrond4:  $linkgroen;
+$achtergrond5:  $lichtbruingrijs;
+
+//borderkleuren
+$borderGrijs:   $lichtgrijs;
+
+// form kleuren
+$formTekst:   $tekst;
+$inputTekst:  $tekst;
+$errorTekst:  $helrood;
+
+$warningTekst:  $helrood;
+$controlBorder: $borderGrijs;
+$controlBorderError:  $helrood;
+
+$buttonTekst: $white;
+$buttonBgDefault: $helrood;
+$buttonBrDefault: darken($bleekblauw, 30%);
+$buttonBoxShadow: darken($bleekblauw, 40%);
+
+// menu kleuren
+$menuTekstKleur:    $white;
+$menuTekstHoverKleur:   $linkrood;
+$menuBgHoverKleur:  $linkrood;
+$menuBgHoverTekstKleur: $black;
+$menuActiveKleur:   $linkrood;
+$menuBorderKleur:   $linkrood;

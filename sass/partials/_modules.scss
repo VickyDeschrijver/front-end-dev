@@ -1,0 +1,110 @@
+// _modules.scss
+
+/* Modules: specifieke structuren in de pagina */
+//partial met specifieke opmaak van de pagina
+// generische styles horen hier niet thuis
+
+/* background structurele elementen */
+
+header { background-color: $achtergrond2;}
+footer { background-color: $achtergrond3;}
+.balk { background-color: $achtergrond1;}
+.frontImage {
+  background-color: $achtergrond2;
+/*  background-image: url("img/driehoeken_blauw.jpg");
+  background-repeat: repeat-x;*/
+  height: 8em;  /*160px*/
+
+  h2 {
+    color: $white;
+    font-size: 5em;
+    margin: 0.6em 0 0.4em 0.2em;
+  }
+  h3 {
+    color: $white;
+    font-size: 2em;
+    margin: 0.4em 0 0 0.5em;
+    display: none;
+  }
+  p {
+    color: $white;
+    display: none;
+  }
+}
+
+@include MQ(M) {
+  .frontImage {
+    height: 10em; /*160px*/
+    h3 {
+      display: block;
+    }
+  }
+}
+
+/* balken */
+// balk, eender welke positie, voor toolbars, hor menus/login forms, etc...
+
+.balk {
+  position: relative;
+  font-size: 3em; // basisgrootte controleert grootte van alle inhouden
+  color: $menuTekstKleur;
+}
+
+@include MQ(M) {
+  .balk {
+    font-size: 1.250em;
+  }
+}
+
+/* logo */
+#logo {
+  position: absolute;
+  top: 0.2em;
+  left: 5em;
+  display: none;  // <M
+  @include MQ(M) {
+    display: inline-block;
+  }
+}
+
+/* toolbalk vast bovenaan */
+.toolbalk {
+  & > .wrapper {
+    line-height: 2.5em; /*40px voor 1em*/
+    height: 2.5em;
+    a {
+      line-height: 2.5em;
+      height: 2.5em;
+    }
+    // login lock ikoon
+    .logintoggle {
+      i.mdi {
+        margin-right: 0.5em;
+        font-size: 2em; // ikoon dubbel grootte om gelijk te komen met hamburger
+      }
+    }
+    // hamburger menu ikoon
+    .menutoggle {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+/* login balk */
+.loginbalk {
+  background-color: $achtergrond5;
+  form {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 1em;
+  }
+}
+
+@include MQ(M) {
+  .loginbalk {
+    height: auto; // voor hor layout
+  }
+}
+
+/* menu balk */
+.menubalk {}

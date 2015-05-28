@@ -1,0 +1,80 @@
+// _typografie.scss
+
+/* typografie elementen */
+
+body {
+  font-family: "source-sans-pro", Verdana, Geneva, sans-serif;
+  font-size: 100%; /*16px*/
+  line-height: 1.5em; /*24px*/
+  color: $tekst;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "pt-sans-narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.25em;  /*36px*/
+  font-weight: bold;
+  line-height: 1em;
+  color: $heading1;
+}
+
+h2 {
+  font-size: 1.875em; /*30px*/
+  color: $heading2;
+}
+
+h3 {
+  font-size: 1.6em; /*26px*/
+  font-weight: bold;
+  color: $heading3;
+  margin-top: 0.6em;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover, a:active {
+    text-decoration: underline;
+    color: $linkhover;
+  }
+}
+
+em {
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: $nadruk;
+}
+
+code {
+  font-family: Courier, monospace;
+  font-weight: bold;
+  color: $code;
+  background-color: $olijfgroen;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+time {
+  font-size: 0.75em;  /*12px*/
+}
+
+/* typografie modules */
+
+.balk {
+  font-family: "pt-sans-narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: $white;
+  a {
+    color: $white;
+    &:hover {text-decoration: none;}
+  }
+}
+
+// Materialdesignicons.com
+@import "../css/materialdesignicons.css";
